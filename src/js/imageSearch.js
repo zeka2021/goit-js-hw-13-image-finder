@@ -16,9 +16,9 @@ function imageSearchInputHandler(e) {
   clearListItems();
 
   servise.resetPage();
-  servise.searchQuerry = input.value;
+  servise.searchQuery = input.value;
 
-  servise.fetcArticles().then(hits => {
+  servise.fethcArticles(query).then(hits => {
     const markup = buildListItemsTemplate(hits);
     iserListItems(markup);
   });
