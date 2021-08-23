@@ -20,7 +20,7 @@ function imageSearchInputHandler(e) {
   servise.resetPage();
   servise.searchQuery = input.value;
 
-  servise.fethcArticles(query).then(hits => {
+  servise.fethcArticles().then(hits => {
     const markup = buildListItemsTemplate(hits);
     iserListItems(markup);
   });
