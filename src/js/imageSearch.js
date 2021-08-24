@@ -3,13 +3,11 @@ import cardImeges from '../templates/templates.hbs';
 import refs from './refs';
 
 const servise = new NewApiService();
-console.log(service);
 
 refs.searchForm.addEventListener('submit', imageSearchInputHandler);
 refs.loadMoreBtn.addEventListener('click', loadMoreBtnHandler);
 
 function imageSearchInputHandler(e) {
-
   e.preventDefault();
 
   const form = e.currentTarget;
@@ -32,6 +30,7 @@ function loadMoreBtnHandler() {
     const markup = buildListItemsTemplate(hits);
     iserListItems(markup);
     window.scrollTo(0, 1000);
+
     window.scrollTo({
       top: 1000,
       behavior: 'smooth',
