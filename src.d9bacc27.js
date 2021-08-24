@@ -9,10 +9,10 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{"handlebars/dist/handlebars.runtime":"pAws"}],"VyiV":[function(require,module,exports) {
 "use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;const e=document.querySelector("#search-form"),o=document.querySelector(".gallery"),r=document.querySelector('button[data-action="load-more"]');var t={searchForm:e,gallery:o,loadMoreBtn:r};exports.default=t;
 },{}],"JJD4":[function(require,module,exports) {
-"use strict";var e=n(require("./apiService")),t=n(require("../templates/templates.hbs")),r=n(require("./refs"));function n(e){return e&&e.__esModule?e:{default:e}}const l=new e.default;function u(e){e.preventDefault();const t=e.currentTarget.elements.query;i(),l.resetPage(),l.searchQuery=t.value,l.fethcArticles().then(e=>{a(c(e))}),t.value=""}function o(){l.fethcArticles().then(e=>{a(c(e)),window.scrollTo(0,1e3),window.scrollTo({top:1e3,behavior:"smooth"})})}function a(e){r.default.gallery.insertAdjacentHTML("beforeend",e)}function c(e){return(0,t.default)(e)}function i(){r.default.gallery.innerHTML=""}console.log(service),r.default.searchForm.addEventListener("submit",u),r.default.loadMoreBtn.addEventListener("click",o);
+"use strict";var e=n(require("./apiService")),t=n(require("../templates/templates.hbs")),r=n(require("./refs"));function n(e){return e&&e.__esModule?e:{default:e}}const u=new e.default;function l(e){e.preventDefault();const t=e.currentTarget.elements.query;c(),u.resetPage(),u.searchQuery=t.value,u.fethcArticles().then(e=>{i(o(e))}),t.value=""}function a(){u.fethcArticles().then(e=>{i(o(e)),window.scrollTo(0,1e3),window.scrollTo({top:1e3,behavior:"smooth"})})}function i(e){r.default.gallery.insertAdjacentHTML("beforeend",e)}function o(e){return(0,t.default)(e)}function c(){r.default.gallery.innerHTML=""}r.default.searchForm.addEventListener("submit",l),r.default.loadMoreBtn.addEventListener("click",a);
 },{"./apiService":"eQwa","../templates/templates.hbs":"NQSZ","./refs":"VyiV"}],"iMte":[function(require,module,exports) {
 
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./js/imageSearch"),require("./style.css");
 },{"./js/imageSearch":"JJD4","./style.css":"iMte"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-13-image-finder/src.560702de.js.map
+//# sourceMappingURL=/goit-js-hw-13-image-finder/src.d9bacc27.js.map
