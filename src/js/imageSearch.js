@@ -2,6 +2,8 @@ import NewApiService from './apiService';
 import cardImeges from '../templates/templates.hbs';
 import refs from './refs';
 import { alert } from '@pnotify/core';
+import '@pnotify/core/dist/PNotify.css';
+import '@pnotify/core/dist/BrightTheme.css';
 
 const servise = new NewApiService();
 
@@ -19,8 +21,8 @@ function imageSearchInputHandler(e) {
   servise.resetPage();
   servise.searchQuery = input.value;
 
-  if (servise.query === '') {
-     alert({
+  if (input.value === '') {
+     return alert({
       text: "You must enter query parameters!"
     });
   }
