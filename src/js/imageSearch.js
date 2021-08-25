@@ -1,6 +1,7 @@
 import NewApiService from './apiService';
 import cardImeges from '../templates/templates.hbs';
 import refs from './refs';
+import { alert } from '@pnotify/core';
 
 const servise = new NewApiService();
 
@@ -18,6 +19,12 @@ function imageSearchInputHandler(e) {
   servise.resetPage();
   servise.searchQuery = input.value;
 
+  if (servise.query === '') {
+     alert({
+      text: "You must enter query parameters!"
+    });
+  }
+  
   servise.fethcArticles().then(hits => {
     const markup = buildListItemsTemplate(hits);
     iserListItems(markup);
