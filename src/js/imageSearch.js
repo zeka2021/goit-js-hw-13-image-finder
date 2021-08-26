@@ -28,6 +28,12 @@ function imageSearchInputHandler(e) {
   }
   
   servise.fethcArticles().then(hits => {
+    if (hits.length < 1) {
+    alert({
+      text: "You must enter query parameters!"
+    });
+return;
+  }
     const markup = buildListItemsTemplate(hits);
     iserListItems(markup);
   });
